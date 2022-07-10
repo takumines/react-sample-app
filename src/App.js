@@ -1,6 +1,8 @@
 import "./styles.css";
 import { useState, useCallback } from "react";
 import { ChildArea } from "./ChildArea";
+import { InlineStyle } from "./components/InlineStyle";
+import { CssModules } from "./components/CssModules";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -17,6 +19,8 @@ export default function App() {
       <br/>
       <button onClick={onClickOpen}>表示</button>
       <ChildArea open={open} onClickClose={onClickClose}/>
+      <InlineStyle />
+      <CssModules />
     </div>
   );
 }
