@@ -1,10 +1,10 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import { UserContext } from "../../../providers/UserProvider";
 
-export const UserIconWithName = (props) => {
+export const UserIconWithName = memo((props) => {
   const { image, name } = props;
   const { userInfo } = useContext(UserContext);
   const isAdmin = userInfo ? userInfo.isAdmin : false
@@ -21,7 +21,7 @@ export const UserIconWithName = (props) => {
       { isAdmin && <span css={editStyle}>編集</span> }
     </div>
   );
-};
+});
 
 const containerStyle = css`
   text-align: center;

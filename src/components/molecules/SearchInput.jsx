@@ -3,8 +3,9 @@
 import { jsx, css } from "@emotion/react";
 import { PrimaryButton } from "../atoms/button/PrimaryButton";
 import { Input } from "../atoms/input/Input";
+import { memo } from "react";
 
-export const SearchInput = () => {
+export const SearchInput = memo(() => {
   return (
     <div css={containerStyle}>
       <Input placeholder="検索条件を入力"/>
@@ -13,7 +14,7 @@ export const SearchInput = () => {
       </div>
     </div>
   );
-};
+});
 
 const containerStyle = css`
   display: flex;
