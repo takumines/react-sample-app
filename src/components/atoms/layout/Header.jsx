@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 export const Header = () => {
   return (
     <header css={headerStyle}>
-      <SLink to="/">HOME</SLink>
-      <SLink to="/users">USERS</SLink>
+      <Link css={linkStyle} to="/">HOME</Link>
+      <Link css={linkStyle} to="/users">USERS</Link>
     </header>
-  )
+  );
 }
 
 const headerStyle = css`
@@ -17,8 +17,8 @@ const headerStyle = css`
   color: #fff;
   text-align: center;
   padding: 8px 0;
-`
+`;
 
-const SLink = styled(Link)`
+const linkStyle = css`
   margin: 0 8px;
-`
+`;

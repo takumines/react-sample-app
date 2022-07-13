@@ -18,8 +18,8 @@ export const SearchInput = () => {
 const containerStyle = css`
   display: flex;
   align-items: center;
-`
+`;
 
 const buttonWrapperStyle = css`
   padding-left: 8px;
-`
+`;

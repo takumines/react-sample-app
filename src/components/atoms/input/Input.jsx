@@ -3,8 +3,8 @@
 import { jsx, css } from "@emotion/react";
 
 export const Input = (props) => {
-  const { placeholder = "" } = props
-  return <input css={inputStyle} type="text" placeholder={placeholder}/>
+  const { placeholder = "" } = props;
+  return <input css={inputStyle} type="text" placeholder={placeholder}/>;
 }
 
 const inputStyle = css`
@@ -12,4 +12,4 @@ const inputStyle = css`
   border: solid #ddd 1px;
   border-radius: 9999px;
   outline: none;
-`
+`;

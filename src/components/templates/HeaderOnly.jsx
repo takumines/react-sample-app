@@ -7,5 +7,5 @@ export const HeaderOnly = (props) => {
       <Header/>
       {children}
     </>
-  )
-}
+  );
+};

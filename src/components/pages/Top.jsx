@@ -12,4 +12,4 @@ export const Top = () => {
 
 const containerStyle = css`
   text-align: center;
-`
+`;

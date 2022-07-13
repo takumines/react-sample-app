@@ -10,4 +10,4 @@ export const BaseButtonStyle = css`
     cursor: pointer;
     opacity: 0.8;
   }
-`
+`;

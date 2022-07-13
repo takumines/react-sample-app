@@ -9,5 +9,5 @@ export const DefaultLayout = (props) => {
       {children}
       <Footer/>
     </>
-  )
-}
+  );
+};

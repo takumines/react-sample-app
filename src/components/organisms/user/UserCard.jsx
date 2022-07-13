@@ -5,7 +5,7 @@ import { Card } from "../../atoms/card/Card";
 import { UserIconWithName } from "../../molecules/user/UserIconWithName";
 
 export const UserCard = (props) => {
-  const { user } = props
+  const { user } = props;
   return (
     <Card>
       <UserIconWithName
@@ -37,4 +37,4 @@ const dlStyle = css`
     padding-bottom: 8px;
     overflow-wrap: break-word;
   }
-`
+`;

@@ -16,7 +16,7 @@ const users = [...Array(10).keys()].map(((val) => {
     },
     website: "https://google.com"
   };
-}))
+}));
 
 export const Users = () => {
   return (
@@ -37,7 +37,7 @@ const containerStyle = css`
   flex-direction: column;
   align-items: center;
   padding: 24px;
-`
+`;
 
 const userAreaStyle = css`
   padding-top: 40px;
@@ -45,4 +45,4 @@ const userAreaStyle = css`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
-`
+`;

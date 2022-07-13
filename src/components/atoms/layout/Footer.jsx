@@ -7,7 +7,7 @@ export const Footer = () => {
     <footer css={footerStyle}>
       &copy; 2022 test Inc.
     </footer>
-  )
+  );
 }
 
 const footerStyle = css`
@@ -18,4 +18,4 @@ const footerStyle = css`
   position: fixed;
   bottom: 0;
   width: 100%;
-`
+`;
