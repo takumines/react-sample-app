@@ -1,16 +1,18 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 export const Header = () => {
   return (
-    <SHeader>
+    <header css={headerStyle}>
       <SLink to="/">HOME</SLink>
       <SLink to="/users">USERS</SLink>
-    </SHeader>
+    </header>
   )
 }
 
-const SHeader = styled.header`
+const headerStyle = css`
   background-color: #11999e;
   color: #fff;
   text-align: center;

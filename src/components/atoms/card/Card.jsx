@@ -1,11 +1,13 @@
-import styled from "styled-components";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 
 export const Card = (props) => {
   const { children } = props
-  return <SCard>{children}</SCard>
+  return <div css={cardStyle}>{children}</div>
 };
 
-const SCard = styled.div`
+const cardStyle = css`
   background-color: #fff;
   box-shadow: #ddd 0 0 4px 2px;
   border-radius: 8px;

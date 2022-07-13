@@ -1,4 +1,6 @@
-import styled from "styled-components";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
 
@@ -18,26 +20,26 @@ const users = [...Array(10).keys()].map(((val) => {
 
 export const Users = () => {
   return (
-    <SContainer>
+    <div css={containerStyle}>
       <h2>ユーザー一覧</h2>
       <SearchInput/>
-      <SUserArea>
+      <div css={userAreaStyle}>
         {users.map((user) => (
           <UserCard key={user.id} user={user}/>
         ))}
-      </SUserArea>
-    </SContainer>
+      </div>
+    </div>
   );
 };
 
-const SContainer = styled.div`
+const containerStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 24px;
 `
 
-const SUserArea = styled.div`
+const userAreaStyle = css`
   padding-top: 40px;
   width: 100%;
   display: grid;

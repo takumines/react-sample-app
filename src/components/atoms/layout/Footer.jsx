@@ -1,14 +1,16 @@
-import styled from "styled-components";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 
 export const Footer = () => {
   return (
-    <SFooter>
+    <footer css={footerStyle}>
       &copy; 2022 test Inc.
-    </SFooter>
+    </footer>
   )
 }
 
-const SFooter = styled.footer`
+const footerStyle = css`
   background-color: #11999e;
   color: #fff;
   text-align: center;

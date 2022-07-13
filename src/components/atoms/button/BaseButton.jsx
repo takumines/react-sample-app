@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import { css } from "@emotion/react";
 
-export const BaseButton = styled.button`
+export const BaseButtonStyle = css`
   color: #fff;
   padding: 6px 24px;
   border: none;

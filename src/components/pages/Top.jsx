@@ -1,13 +1,15 @@
-import styled from "styled-components";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 
 export const Top = () => {
   return (
-    <SContainer>
+    <div css={containerStyle}>
       <h2>TOPページです</h2>
-    </SContainer>
+    </div>
   );
 };
 
-const SContainer = styled.div`
+const containerStyle = css`
   text-align: center;
 `

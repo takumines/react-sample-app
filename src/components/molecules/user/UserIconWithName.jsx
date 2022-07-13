@@ -1,29 +1,32 @@
-import styled from "styled-components";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 
 export const UserIconWithName = (props) => {
   const { image, name } = props
   return (
-    <SContainer>
-      <SImage
+    <div css={containerStyle}>
+      <img
+        css={imageStyle}
         height={160}
         width={160}
         src={image}
         alt={name}
       />
-      <SName>{name}</SName>
-    </SContainer>
+      <p css={nameStyle}>{name}</p>
+    </div>
   );
 };
 
-const SContainer = styled.div`
+const containerStyle = css`
   text-align: center;
 `
 
-const SImage = styled.img`
+const imageStyle = css`
   border-radius: 50%;
 `
 
-const SName = styled.p`
+const nameStyle = css`
   font-size: 18px;
   font-weight: bold;
   margin: 0;

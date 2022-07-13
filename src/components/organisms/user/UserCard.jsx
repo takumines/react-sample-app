@@ -1,4 +1,6 @@
-import styled from "styled-components";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import { Card } from "../../atoms/card/Card";
 import { UserIconWithName } from "../../molecules/user/UserIconWithName";
 
@@ -10,7 +12,7 @@ export const UserCard = (props) => {
         image={user.image}
         name={user.name}
       />
-      <SDl>
+      <dl css={dlStyle}>
         <dt>メール</dt>
         <dd>{user.email}</dd>
         <dt>TEL</dt>
@@ -19,12 +21,12 @@ export const UserCard = (props) => {
         <dd>{user.company.name}</dd>
         <dt>HP</dt>
         <dd>{user.website}</dd>
-      </SDl>
+      </dl>
     </Card>
   );
 };
 
-const SDl = styled.dl`
+const dlStyle = css`
   text-align: left;
   margin-bottom: 0;
   dt {

@@ -1,23 +1,25 @@
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/react";
 import { PrimaryButton } from "../atoms/button/PrimaryButton";
 import { Input } from "../atoms/input/Input";
-import styled from "styled-components";
 
 export const SearchInput = () => {
   return (
-    <SContainer>
+    <div css={containerStyle}>
       <Input placeholder="検索条件を入力"/>
-      <SButtonWrapper>
+      <div css={buttonWrapperStyle}>
         <PrimaryButton>検索</PrimaryButton>
-      </SButtonWrapper>
-    </SContainer>
+      </div>
+    </div>
   );
 };
 
-const SContainer = styled.div`
+const containerStyle = css`
   display: flex;
   align-items: center;
 `
 
-const SButtonWrapper = styled.div`
+const buttonWrapperStyle = css`
   padding-left: 8px;
 `
