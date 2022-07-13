@@ -3,7 +3,7 @@
 import { jsx, css } from "@emotion/react";
 
 export const UserIconWithName = (props) => {
-  const { image, name } = props;
+  const { image, name, isAdmin } = props;
   return (
     <div css={containerStyle}>
       <img
@@ -14,6 +14,7 @@ export const UserIconWithName = (props) => {
         alt={name}
       />
       <p css={nameStyle}>{name}</p>
+      { isAdmin && <span css={editStyle}>編集</span> }
     </div>
   );
 };
@@ -31,4 +32,10 @@ const nameStyle = css`
   font-weight: bold;
   margin: 0;
   color: #40514e;
+`;
+
+const editStyle = css`
+  text-decoration: underline;
+  color: #aaa;
+  cursor: pointer;
 `;
