@@ -1,13 +1,23 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { SecondaryButton } from "../atoms/button/SecondaryButton";
+import { UserContext } from "../../providers/UserProvider";
 
 export const Top = () => {
   const history = useHistory();
-  const onClickAdmin = () => history.push("/users",{ isAdmin: true} )
-  const onClickGeneral = () => history.push("/users", { isAdmin: false })
+  const { setUserInfo } = useContext(UserContext);
+  const onClickAdmin = () => {
+    setUserInfo({ isAdmin: true })
+    history.push("/users");
+  }
+  const onClickGeneral = () => {
+    setUserInfo({ isAdmin: false })
+    history.push("/users")
+  }
+
   return (
     <div css={containerStyle}>
       <h2>TOPページです</h2>
