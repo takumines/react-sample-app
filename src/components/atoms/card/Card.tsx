@@ -1,8 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { FC, ReactNode } from "react";
 
-export const Card = (props) => {
+type Props = { children: ReactNode }
+
+export const Card:FC<Props> = (props: Props) => {
   const { children } = props;
   return <div css={cardStyle}>{children}</div>;
 };

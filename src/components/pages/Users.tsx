@@ -3,8 +3,10 @@
 import { jsx, css } from "@emotion/react";
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
+import {User} from "../../types/user";
 
-const users = [...Array(10).keys()].map(((val) => {
+
+const users: User[] = [...Array(10).keys()].map(((val) => {
   return {
     id: val,
     image: "https://source.unsplash.com/Mv9hjnEUHR4",
@@ -26,7 +28,7 @@ export const Users = () => {
       <SearchInput/>
       <div css={userAreaStyle}>
         {users.map((user) => (
-          <UserCard key={user.id} user={user} />
+          <UserCard key={user.id} {...user}/>
         ))}
       </div>
     </div>

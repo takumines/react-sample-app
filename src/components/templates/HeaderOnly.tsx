@@ -1,6 +1,9 @@
 import { Header } from "../atoms/layout/Header";
+import { FC, ReactNode } from "react";
 
-export const HeaderOnly = (props) => {
+type Props = { children: ReactNode }
+
+export const HeaderOnly: FC<Props> = (props: Props) => {
   const { children } = props;
   return (
     <>

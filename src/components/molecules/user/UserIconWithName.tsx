@@ -1,11 +1,16 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
-import { memo } from "react";
+import {FC, memo} from "react";
 import { useRecoilValue } from "recoil";
-import {userState} from "../../../store/userState";
+import { userState } from "../../../store/userState";
 
-export const UserIconWithName = memo((props) => {
+type Props = {
+  image: string,
+  name: string
+}
+
+export const UserIconWithName: FC<Props> = memo((props: Props) => {
   const { image, name } = props;
   const userInfo = useRecoilValue(userState);
   const isAdmin = userInfo ? userInfo.isAdmin : false;

@@ -1,8 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/react";
+import { FC } from "react";
 
-export const Input = (props) => {
+type Props = { placeholder: string }
+
+export const Input: FC<Props> = (props: Props) => {
   const { placeholder = "" } = props;
   return <input css={inputStyle} type="text" placeholder={placeholder}/>;
 }

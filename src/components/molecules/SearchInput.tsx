@@ -3,9 +3,9 @@
 import { jsx, css } from "@emotion/react";
 import { PrimaryButton } from "../atoms/button/PrimaryButton";
 import { Input } from "../atoms/input/Input";
-import { memo } from "react";
+import { FC, memo } from "react";
 
-export const SearchInput = memo(() => {
+export const SearchInput: FC = memo(() => {
   return (
     <div css={containerStyle}>
       <Input placeholder="検索条件を入力"/>

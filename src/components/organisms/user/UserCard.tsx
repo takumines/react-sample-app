@@ -3,10 +3,14 @@
 import { jsx, css } from "@emotion/react";
 import { Card } from "../../atoms/card/Card";
 import { UserIconWithName } from "../../molecules/user/UserIconWithName";
-import { memo } from "react";
+import { FC, memo } from "react";
+import { User } from "../../../types/user";
 
-export const UserCard = memo((props) => {
-  const { user } = props;
+type Props = User
+
+export const UserCard: FC<Props> = memo((props: Props) => {
+
+  const user = props;
   return (
     <Card>
       <UserIconWithName
