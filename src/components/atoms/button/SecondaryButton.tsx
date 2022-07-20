@@ -9,7 +9,7 @@ type Props = {
   onClick: React.MouseEventHandler<HTMLButtonElement>
 }
 
-export const SecondaryButton: FC<Props>  = (props: Props) => {
+export const SecondaryButton: FC<Props>  = (props) => {
   const { children, onClick } = props;
   return <button css={buttonStyle} onClick={onClick}>{children}</button>;
 };

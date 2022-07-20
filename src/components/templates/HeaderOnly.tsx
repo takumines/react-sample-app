@@ -3,7 +3,7 @@ import { FC, ReactNode } from "react";
 
 type Props = { children: ReactNode }
 
-export const HeaderOnly: FC<Props> = (props: Props) => {
+export const HeaderOnly: FC<Props> = (props) => {
   const { children } = props;
   return (
     <>

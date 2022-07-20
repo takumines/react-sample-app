@@ -10,7 +10,7 @@ type Props = {
   name: string
 }
 
-export const UserIconWithName: FC<Props> = memo((props: Props) => {
+export const UserIconWithName: FC<Props> = memo((props) => {
   const { image, name } = props;
   const userInfo = useRecoilValue(userState);
   const isAdmin = userInfo ? userInfo.isAdmin : false;

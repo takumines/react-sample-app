@@ -5,7 +5,7 @@ import { FC, ReactNode } from "react";
 
 type Props = { children: ReactNode }
 
-export const Card:FC<Props> = (props: Props) => {
+export const Card:FC<Props> = (props) => {
   const { children } = props;
   return <div css={cardStyle}>{children}</div>;
 };

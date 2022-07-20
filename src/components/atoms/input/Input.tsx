@@ -5,7 +5,7 @@ import { FC } from "react";
 
 type Props = { placeholder: string }
 
-export const Input: FC<Props> = (props: Props) => {
+export const Input: FC<Props> = (props) => {
   const { placeholder = "" } = props;
   return <input css={inputStyle} type="text" placeholder={placeholder}/>;
 }

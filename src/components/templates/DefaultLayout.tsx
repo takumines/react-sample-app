@@ -4,7 +4,7 @@ import { FC, ReactNode } from "react";
 
 type Props = { children: ReactNode }
 
-export const DefaultLayout: FC<Props> = (props: Props) => {
+export const DefaultLayout: FC<Props> = (props) => {
   const { children } = props;
   return (
     <>

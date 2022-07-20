@@ -8,7 +8,7 @@ import { User } from "../../../types/user";
 
 type Props = User
 
-export const UserCard: FC<Props> = memo((props: Props) => {
+export const UserCard: FC<Props> = memo((props) => {
 
   const user = props;
   return (
