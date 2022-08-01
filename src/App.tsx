@@ -1,20 +1,13 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import theme from './theme/theme';
+import { Router } from './router/Router';
+
+const App: FC = () => (
+  <ChakraProvider theme={theme}>
+    <Router />
+  </ChakraProvider>
+);
 
 export default App;
