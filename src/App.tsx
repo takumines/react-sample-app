@@ -1,11 +1,20 @@
-import "./styles.css";
-import { BrowserRouter } from "react-router-dom";
-import { RecoilRoot } from "recoil";
+import React from 'react';
 
-export default function App() {
+function App() {
   return (
-    <RecoilRoot>
-      <BrowserRouter/>
-    </RecoilRoot>
+    <div className="App">
+      <header className="App-header">
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
-};
+}
+
+export default App;
