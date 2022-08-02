@@ -1,19 +1,12 @@
-import { FC, memo, ReactNode } from 'react';
+import { FC, memo } from 'react';
+import { Outlet } from 'react-router-dom';
 import Header from '../organisms/layout/Header';
 
-type Props = {
-  children: ReactNode
-}
-
-const HeaderLayout: FC<Props> = (props) => {
-  const { children } = props;
-
-  return (
-    <>
-      <Header />
-      {children}
-    </>
-  );
-};
+const HeaderLayout: FC = () => (
+  <>
+    <Header />
+    <Outlet />
+  </>
+);
 
 export default memo(HeaderLayout);
