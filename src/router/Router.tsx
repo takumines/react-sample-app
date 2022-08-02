@@ -11,7 +11,7 @@ export const Router: FC = () => (
     <Routes>
       <Route path="/">
         <Route index element={<Login />} />
-        <Route path="/home">
+        <Route path="home">
           <Route index element={<Home />} />
           <Route path="user_management" element={<UserManagement />} />
           <Route path="setting" element={<Setting />} />
