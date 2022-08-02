@@ -14,9 +14,18 @@ import MenuDrawer from '../../molecules/MenuDrawer';
 const Header: FC = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
-  const onClickHome = useCallback(() => navigate('/home'), [navigate]);
-  const onClickUserManagement = useCallback(() => navigate('/home/user_management'), [navigate]);
-  const onClickSetting = useCallback(() => navigate('/home/setting'), [navigate]);
+  const onClickHome = useCallback(() => {
+    navigate('/home');
+    onClose();
+  }, [navigate, onClose]);
+  const onClickUserManagement = useCallback(() => {
+    navigate('/home/user_management');
+    onClose();
+  }, [navigate, onClose]);
+  const onClickSetting = useCallback(() => {
+    navigate('/home/setting');
+    onClose();
+  }, [navigate, onClose]);
 
   return (
     <>
