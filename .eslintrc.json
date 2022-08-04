@@ -1,15 +1,12 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
   "extends": [
     "react-app",
     "plugin:react/recommended",
     "airbnb",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "prettier"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -25,46 +22,15 @@
     "import"
   ],
   "rules": {
-    "react/jsx-uses-react": "off",
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
-    "jsx-a11y/anchor-is-valid": 0,
-    "react/function-component-definition": [
-      2,
-      { "namedComponents": "arrow-function" }
-    ],
-    "react/jsx-filename-extension": [
+    "import/order": [
       "error",
       {
-        "extensions": [
-          ".jsx",
-          ".tsx"
-        ]
+        "alphabetize": {
+          "order": "asc"
+        }
       }
-    ],
-    "import/extensions": [
-      "error",
-      "ignorePackages",
-      {
-        "js": "never",
-        "jsx": "never",
-        "ts": "never",
-        "tsx": "never"
-      }
-    ],
-    "@typescript-eslint/no-use-before-define": [
-      "error"
     ]
-  },
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
-      }
-    }
   }
 }
