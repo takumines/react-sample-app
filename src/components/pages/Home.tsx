@@ -1,5 +1,5 @@
-import { FC, memo } from 'react';
+import { FC, memo } from 'react'
 
-const Home: FC = () => <p>ホームページです</p>;
+const Home: FC = () => <p>ホームページです</p>
 
-export default memo(Home);
+export default memo(Home)

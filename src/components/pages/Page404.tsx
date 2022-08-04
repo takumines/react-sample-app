@@ -1,5 +1,5 @@
-import { FC, memo } from 'react';
+import { FC, memo } from 'react'
 
-const Page404: FC = () => <p>404ページです</p>;
+const Page404: FC = () => <p>404ページです</p>
 
-export default memo(Page404);
+export default memo(Page404)

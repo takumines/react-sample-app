@@ -1,5 +1,5 @@
-import { FC, memo } from 'react';
+import { FC, memo } from 'react'
 
-const UserManagement: FC = () => <p>ユーザー管理ページです</p>;
+const UserManagement: FC = () => <p>ユーザー管理ページです</p>
 
-export default memo(UserManagement);
+export default memo(UserManagement)

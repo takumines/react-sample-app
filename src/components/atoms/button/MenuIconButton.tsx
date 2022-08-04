@@ -1,24 +1,24 @@
-import { FC } from 'react';
-import { HamburgerIcon } from '@chakra-ui/icons';
-import { IconButton } from '@chakra-ui/react';
+import { HamburgerIcon } from '@chakra-ui/icons'
+import { IconButton } from '@chakra-ui/react'
+import { FC } from 'react'
 
 type Props = {
-  onOpen: () => void;
+  onOpen: () => void
 }
 
 const MenuIconButton: FC<Props> = (props) => {
-  const { onOpen } = props;
+  const { onOpen } = props
 
   return (
     <IconButton
-      aria-label="メニューボタン"
+      aria-label='メニューボタン'
       icon={<HamburgerIcon />}
-      size="sm"
-      variant="unstyled"
+      size='sm'
+      variant='unstyled'
       display={{ base: 'block', md: 'none' }}
       onClick={onOpen}
     />
-  );
-};
+  )
+}
 
-export default MenuIconButton;
+export default MenuIconButton
